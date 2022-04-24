@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semáforo</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <div class="trafficlight">
+        <div class="protector"></div>
+        <div class="protector"></div>
+        <div class="protector"></div>
+        <div class="red" id="red"></div>
+        <div class="yellow" id="yellow"></div>
+        <div class="green" id="green"></div>
+    </div>
+
+    <div class="counter-wrap">
+        <div class="counter">
+            <span id="counter-number" class="disable">00</span>
+        </div>
+    </div>
+
+    <div class="stop-wrap">
+        <div class="smartphone">
+            <div class="volume-up-smartphone"></div>
+            <div class="volume-down-smartphone"></div>
+            <div class="power-smartphone"></div>
+            <div class="header-smartphone">
+                <div class="camera-smartphone"></div>
+                <div class="speaker-smartphone"></div>
+                <div class="led-smartphone"></div>
+            </div>
+            <div class="screen-smartphone">
+                <button class="push--skeuo" id="stopbtn"></button>
+            </div>
+            <div class="button-smartphone"></div>
+        </div>
+    </div>
+ 
+    <div class="table-wrap">
+        <table class="maintable table stripe dataTable"  id="maintable">
+            <thead>
+                <tr>
+                    <th>Pasos</th>
+                    <th>Ubicaion</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div class="data-wrap">
+        <div>
+            TOTAL METRO: <span id="tm"></span>
+        </div>
+        <div>
+            TOTAL PASOS: <span id="tp"></span>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+      <script src="/js/main.js"></script>
+</body>
+</html>
